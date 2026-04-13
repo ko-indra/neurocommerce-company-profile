@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './index.css';
-import { Mail, Phone, MapPin, Smartphone, ShoppingBag, Bot, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Smartphone, ShoppingBag, Bot, Globe, Video } from 'lucide-react';
 
 export default function App() {
   const [lang, setLang] = useState('en');
@@ -26,6 +26,8 @@ export default function App() {
       srv2_desc: 'We manage your live sales through Shopee Live and TikTok Live. We hold a scalable network of in-house KOLs customized to your brand\'s specific needs.',
       srv3_title: 'Intelligent AI Chatbot',
       srv3_desc: 'Versatile chatbots for customer service, company profiles, product catalogs, up to product education and directing prospects to successful sales.',
+      srv4_title: 'AI Avatar Video Content',
+      srv4_desc: 'Create highly engaging AI-generated video content with realistic avatars to rapidly elevate your marketing and significantly boost your sales.',
       clients_title: 'Our Clients',
       clients_sub: 'Trusted by growing brands to build their digital presence.',
       shops_title: 'Managed Online Stores',
@@ -49,6 +51,8 @@ export default function App() {
       srv2_desc: 'Kami menyediakan jasa penjualan langsung melalui Shopee Live dan TikTok Live. Kami memiliki in-house KOL yang dapat diperbanyak sesuai kebutuhan Anda.',
       srv3_title: 'Chatbot AI Cerdas',
       srv3_desc: 'Chatbot serbaguna untuk kebutuhan customer service, profil perusahaan, katalog produk, hingga edukasi produk untuk mengarahkan langsung ke penjualan.',
+      srv4_title: 'Konten Video Avatar AI',
+      srv4_desc: 'Menciptakan konten video yang di-generate oleh AI menggunakan avatar realistis untuk mendongkrak promosi dan secara signifikan meningkatkan penjualan Anda.',
       clients_title: 'Klien Kami',
       clients_sub: 'Dipercaya oleh berbagai brand untuk mengembangkan ekosistem digital mereka.',
       shops_title: 'Toko Online yang Kami Kelola',
@@ -141,6 +145,11 @@ export default function App() {
                 <div className="service-icon"><Bot size={32} /></div>
                 <h3>{getText('srv3_title')}</h3>
                 <p>{getText('srv3_desc')}</p>
+              </div>
+              <div className="service-card">
+                <div className="service-icon"><Video size={32} /></div>
+                <h3>{getText('srv4_title')}</h3>
+                <p>{getText('srv4_desc')}</p>
               </div>
             </div>
           </div>
