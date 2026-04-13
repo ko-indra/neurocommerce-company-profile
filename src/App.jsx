@@ -129,8 +129,8 @@ export default function App() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-zinc-950/70 backdrop-blur-md border-b border-zinc-800/60">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl accent-gradient flex items-center justify-center text-white font-bold text-xl shadow-[0_0_15px_rgba(99,102,241,0.5)] transition duration-300 group-hover:shadow-[0_0_25px_rgba(99,102,241,0.7)]">
-              N
+            <div className="w-10 h-10 rounded-xl bg-[#09090b] overflow-hidden shadow-[0_0_15px_rgba(99,102,241,0.2)] transition duration-300 group-hover:shadow-[0_0_25px_rgba(99,102,241,0.5)]">
+              <img src="/assets/Neurocommerce-assets/Neurocommerce logo.jpeg" alt="Neurocommerce Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-xl font-bold text-gradient">Neurocommerce</span>
           </a>
@@ -348,7 +348,7 @@ export default function App() {
           
           <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-zinc-900/80 text-zinc-500 text-sm">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <div className="w-6 h-6 rounded-md accent-gradient flex items-center justify-center text-white font-bold text-[10px]">N</div>
+              <img src="/assets/Neurocommerce-assets/Neurocommerce logo.jpeg" alt="Neurocommerce Logo" className="w-6 h-6 rounded-sm object-cover" />
               <span className="font-semibold text-zinc-400">Neurocommerce</span>
             </div>
             <p>&copy; {new Date().getFullYear()} Neurocommerce. All rights reserved.</p>
