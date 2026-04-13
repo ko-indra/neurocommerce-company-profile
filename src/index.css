@@ -26,4 +26,17 @@
   .accent-text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500;
   }
+
+  .animate-marquee {
+    animation: scroll 25s linear infinite;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
 }

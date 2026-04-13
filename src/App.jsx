@@ -264,12 +264,24 @@ export default function App() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{getText('clients_title')}</h2>
               <p className="text-zinc-400 text-lg">{getText('clients_sub')}</p>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-80">
-              {clients.map(logo => (
-                <div key={logo} className="w-24 md:w-32 hover:-translate-y-2 hover:scale-110 transition-all duration-300 grayscale opacity-60 hover:grayscale-0 hover:opacity-100">
-                  <img src={`/assets/our-clients-logo/${logo}`} alt={logo.split('.')[0]} className="w-full h-auto rounded-xl shadow-xl" />
-                </div>
-              ))}
+            <div className="relative overflow-hidden w-full flex bg-zinc-950 [--gap:2.5rem] md:[--gap:4rem] gap-[var(--gap)] py-4 mt-8">
+              <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-zinc-950 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-zinc-950 to-transparent z-10 pointer-events-none"></div>
+              
+              <div className="flex shrink-0 animate-marquee gap-[var(--gap)] justify-around items-center min-w-full">
+                {clients.map((logo, index) => (
+                  <div key={`first-${index}`} className="w-24 md:w-40 hover:-translate-y-2 hover:scale-110 transition-all duration-300 cursor-pointer">
+                    <img src={`/assets/our-clients-logo/${logo}`} alt={logo.split('.')[0]} className="w-full h-auto rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_30px_rgba(99,102,241,0.3)] object-contain bg-white/5" />
+                  </div>
+                ))}
+              </div>
+              <div aria-hidden="true" className="flex shrink-0 animate-marquee gap-[var(--gap)] justify-around items-center min-w-full">
+                {clients.map((logo, index) => (
+                  <div key={`second-${index}`} className="w-24 md:w-40 hover:-translate-y-2 hover:scale-110 transition-all duration-300 cursor-pointer">
+                    <img src={`/assets/our-clients-logo/${logo}`} alt={logo.split('.')[0]} className="w-full h-auto rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_15px_30px_rgba(99,102,241,0.3)] object-contain bg-white/5" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
