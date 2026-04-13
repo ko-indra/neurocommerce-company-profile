@@ -7,6 +7,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 5rem; /* Account for fixed navbar height */
   }
   body {
     @apply bg-zinc-950 text-zinc-50 font-sans antialiased selection:bg-indigo-500/30;

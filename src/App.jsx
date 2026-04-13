@@ -168,7 +168,7 @@ export default function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-zinc-950 pt-20" id="home">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-zinc-950 pt-20 snap-start" id="home">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div>
           <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 mb-8">
@@ -194,7 +194,7 @@ export default function App() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="py-24 bg-zinc-950 relative border-t border-zinc-900">
+        <section id="services" className="py-24 bg-zinc-950 relative border-t border-zinc-900 snap-start">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{getText('services_title')}</h2>
@@ -221,7 +221,7 @@ export default function App() {
         </section>
 
         {/* AI Avatars Section */}
-        <section id="avatars" className="py-24 bg-zinc-900/30 relative border-t border-zinc-900">
+        <section id="avatars" className="py-24 bg-zinc-900/30 relative border-t border-zinc-900 snap-start">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{getText('avatar_title')}</h2>
@@ -258,7 +258,7 @@ export default function App() {
         </section>
 
         {/* Clients Section */}
-        <section id="clients" className="py-24 bg-zinc-950 border-t border-zinc-900">
+        <section id="clients" className="py-24 bg-zinc-950 border-t border-zinc-900 snap-start">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{getText('clients_title')}</h2>
@@ -275,7 +275,7 @@ export default function App() {
         </section>
 
         {/* Shops Section */}
-        <section id="stores" className="py-24 bg-zinc-900/30 border-t border-zinc-900">
+        <section id="stores" className="py-24 bg-zinc-900/30 border-t border-zinc-900 snap-start">
           <div className="max-w-5xl mx-auto px-6">
             <div className="bg-zinc-900/50 backdrop-blur-md border border-zinc-800 rounded-[2.5rem] p-8 md:p-16">
               <div className="text-center mb-12">
@@ -295,7 +295,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer id="contact" className="bg-[#050505] pt-24 pb-8 border-t border-zinc-900">
+      <footer id="contact" className="bg-[#050505] pt-24 pb-8 border-t border-zinc-900 snap-start">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 mb-20 relative">
             
