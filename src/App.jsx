@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './index.css';
-import { Mail, Phone, MapPin, Smartphone, ShoppingBag, Bot, Globe, Video } from 'lucide-react';
+import { Mail, Phone, MapPin, Smartphone, ShoppingBag, Bot, Globe, Video, ExternalLink } from 'lucide-react';
 
 export default function App() {
   const [lang, setLang] = useState('en');
@@ -28,6 +28,9 @@ export default function App() {
       srv3_desc: 'Versatile chatbots for customer service, company profiles, product catalogs, up to product education and directing prospects to successful sales.',
       srv4_title: 'AI Avatar Video Content',
       srv4_desc: 'Create highly engaging AI-generated video content with realistic avatars to rapidly elevate your marketing and significantly boost your sales.',
+      avatar_title: 'Our AI Avatars',
+      avatar_sub: 'Meet our AI-powered virtual influencers — already creating viral content on TikTok.',
+      avatar_cta: 'View on TikTok',
       clients_title: 'Our Clients',
       clients_sub: 'Trusted by growing brands to build their digital presence.',
       shops_title: 'Managed Online Stores',
@@ -53,6 +56,9 @@ export default function App() {
       srv3_desc: 'Chatbot serbaguna untuk kebutuhan customer service, profil perusahaan, katalog produk, hingga edukasi produk untuk mengarahkan langsung ke penjualan.',
       srv4_title: 'Konten Video Avatar AI',
       srv4_desc: 'Menciptakan konten video yang di-generate oleh AI menggunakan avatar realistis untuk mendongkrak promosi dan secara signifikan meningkatkan penjualan Anda.',
+      avatar_title: 'Avatar AI Kami',
+      avatar_sub: 'Kenali virtual influencer berbasis AI kami — sudah aktif membuat konten viral di TikTok.',
+      avatar_cta: 'Lihat di TikTok',
       clients_title: 'Klien Kami',
       clients_sub: 'Dipercaya oleh berbagai brand untuk mengembangkan ekosistem digital mereka.',
       shops_title: 'Toko Online yang Kami Kelola',
@@ -67,6 +73,27 @@ export default function App() {
   const clients = [
     'aixin.jpg', 'ancala-pandansari.jpg', 'bahong.jpg', 'koindra-tutorial.jpg',
     'kotak-sepatu.jpg', 'kudapan-area.jpg', 'namarie.jpg', 'sofie.jpg'
+  ];
+
+  const avatars = [
+    {
+      name: 'Cici Aini',
+      handle: '@ciciaini_',
+      image: '/assets/ai-avatars/cici-aini.png',
+      url: 'https://www.tiktok.com/@ciciaini_',
+      desc: lang === 'en'
+        ? 'AI-generated virtual influencer creating engaging lifestyle & product content.'
+        : 'Virtual influencer berbasis AI yang membuat konten gaya hidup & produk yang menarik.'
+    },
+    {
+      name: 'Rara Aira',
+      handle: '@__raraaira',
+      image: '/assets/ai-avatars/rara-aira.png',
+      url: 'https://www.tiktok.com/@__raraaira',
+      desc: lang === 'en'
+        ? 'AI avatar influencer driving brand awareness through creative video storytelling.'
+        : 'Avatar influencer AI yang mendorong kesadaran merek melalui narasi video kreatif.'
+    }
   ];
 
   const shops = [
@@ -151,6 +178,40 @@ export default function App() {
                 <h3>{getText('srv4_title')}</h3>
                 <p>{getText('srv4_desc')}</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* AI Avatar Portfolio */}
+        <section id="avatars" style={{background: 'rgba(2, 6, 23, 0.5)'}}>
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title text-gradient">{getText('avatar_title')}</h2>
+              <p className="section-subtitle">{getText('avatar_sub')}</p>
+            </div>
+            <div className="avatars-grid">
+              {avatars.map((avatar, i) => (
+                <a
+                  key={i}
+                  href={avatar.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="avatar-card"
+                >
+                  <div className="avatar-image-wrapper">
+                    <img src={avatar.image} alt={avatar.name} className="avatar-image" />
+                    <div className="avatar-overlay">
+                      <ExternalLink size={24} />
+                    </div>
+                  </div>
+                  <div className="avatar-info">
+                    <h3>{avatar.name}</h3>
+                    <span className="avatar-handle">{avatar.handle}</span>
+                    <p>{avatar.desc}</p>
+                    <span className="avatar-cta">{getText('avatar_cta')} →</span>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </section>
