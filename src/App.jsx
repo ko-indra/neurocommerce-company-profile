@@ -79,7 +79,7 @@ export default function App() {
     {
       name: 'Cici Aini',
       handle: '@ciciaini_',
-      image: '/assets/ai-avatars/cici-aini.png',
+      image: '/assets/ai-avatars/cici-aini.jpeg',
       url: 'https://www.tiktok.com/@ciciaini_',
       desc: lang === 'en'
         ? 'AI-generated virtual influencer creating engaging lifestyle & product content.'
@@ -88,7 +88,7 @@ export default function App() {
     {
       name: 'Rara Aira',
       handle: '@__raraaira',
-      image: '/assets/ai-avatars/rara-aira.png',
+      image: '/assets/ai-avatars/rara-aira.jpeg',
       url: 'https://www.tiktok.com/@__raraaira',
       desc: lang === 'en'
         ? 'AI avatar influencer driving brand awareness through creative video storytelling.'
